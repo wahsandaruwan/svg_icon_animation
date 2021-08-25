@@ -1,0 +1,117 @@
+/* -----Reset----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----Common----- */
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #e74c3c;
+    overflow: hidden;
+}
+
+/* -----Container----- */
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container > .icons{
+    width: 200px;
+}
+
+.container > .icons path{
+    fill: transparent;
+    stroke: #ecf0f1;
+    cursor: pointer;
+}
+
+/* ---Icons Loading--- */
+.container .icons{
+    margin-top: -20%;
+    opacity: 0;
+    animation: anim-load 1s linear forwards;
+}
+
+/* Animation */
+@keyframes anim-load{
+    0%{
+        margin-top: -20%;
+        opacity: 0;
+    }
+
+    100%{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+/* ---SVG Paths--- */
+/* Path 1 */
+.container .icons path:first-child{
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+}
+
+.container .icons:hover path:first-child{
+    animation: anim-icons1 2s linear forwards;
+}
+
+/* Animation */
+@keyframes anim-icons1{
+    0%{
+        stroke-dashoffset: 0;
+    }
+
+    40%{
+        stroke-dashoffset: 500;
+    }
+
+    80%{
+        stroke-dashoffset: 1000;
+        fill: transparent;
+    }
+
+    100%{
+        stroke-dashoffset: 1000;
+        fill: #ecf0f1;
+    }
+}
+
+/* Path 2 */
+.container .icons path:nth-child(2){
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+    animation: anim-icons2 4s linear forwards 1s;
+}
+
+/* Animation */
+@keyframes anim-icons2{
+    0%{
+        stroke-dashoffset: 0;
+    }
+
+    25%{
+        stroke-dashoffset: 500;
+    }
+
+    50%{
+        stroke-dashoffset: 750;
+    }
+
+    75%{
+        stroke-dashoffset: 1000;
+        fill: transparent;
+    }
+
+    100%{
+        stroke-dashoffset: 1000;
+        fill: #e74c3c;
+    }
+}
