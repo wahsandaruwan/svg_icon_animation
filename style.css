@@ -29,6 +29,8 @@ body{
 .container > .icons path{
     fill: transparent;
     stroke: #ecf0f1;
+    /* stroke-width: 3;
+    stroke-opacity: 1; */
     cursor: pointer;
 }
 
@@ -97,18 +99,14 @@ body{
         stroke-dashoffset: 0;
     }
 
-    25%{
+    50%{
         stroke-dashoffset: 500;
     }
 
-    50%{
-        stroke-dashoffset: 750;
-    }
-
-    75%{
+    /* 80%{
         stroke-dashoffset: 1000;
         fill: transparent;
-    }
+    } */
 
     100%{
         stroke-dashoffset: 1000;
