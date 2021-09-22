@@ -99,14 +99,14 @@ body{
         stroke-dashoffset: 0;
     }
 
-    50%{
+    40%{
         stroke-dashoffset: 500;
     }
 
-    /* 80%{
+    80%{
         stroke-dashoffset: 1000;
         fill: transparent;
-    } */
+    }
 
     100%{
         stroke-dashoffset: 1000;
